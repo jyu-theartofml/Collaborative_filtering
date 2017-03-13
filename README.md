@@ -15,7 +15,7 @@ The similiarity matrix is the weight that will yield model prediction. </p>
 <b>Model based CF (SVD) </b>
 <p>Memory based CF algorithm can be very computationally expensive and is known to have issue with scalability, plus it doesn't learn well with highly sparse matrix like the one used in this python example.
 A useful alternative is model based CF using SVD for matrix decomposition. This method breaks down the user-item matrix into small matrices with latent-feature vectors,
-represent implicit characteristics for the user and items. However, SVD can also become computationally expensive with large matrix. </p>
+representing implicit characteristics for the user and items. However, SVD can also become computationally expensive with large matrix. </p>
 <p align='center'><a href="https://www.slideshare.net/DKALab/collaborativefilteringfactorization"><img src= 'svd.jpg', width=50%, height=50%></a><br> Source: DKAlab (Sldieshare)</p>
 
 <b>Model based CF (Stochastic Gradient Descend) </b>
