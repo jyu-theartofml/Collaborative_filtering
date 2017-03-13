@@ -23,5 +23,5 @@ representing implicit characteristics for the user and items. However, SVD can a
 
 <p align='center'><a href="https://databricks-training.s3.amazonaws.com/movie-recommendation-with-mllib.html"><img src= 'matrix_factorization.png', width=50%, height=50%></a> <br>Source: databricks training</p>
 
-<p>After comparing the three algorithms, SGD matrix factorization yielded the best result with 100 iterations to calculate the optimal latent feature matrices. It would be interesting to use the same data set and run it with Alternative Least Squre (ALS) on Spark since it's an API within the current spark.ml package. 
+<p>After comparing the three algorithms, SGD matrix factorization yielded the best result with 100 iterations, learning rate of 0.01 to calculate the optimal latent feature matrices (see ipynb file). It would be interesting to use the same data set and run it with Alternative Least Squre (ALS) on Spark since it's an API within the current spark.ml package. 
 
