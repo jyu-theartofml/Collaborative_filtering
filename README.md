@@ -9,7 +9,7 @@ http://blog.ethanrosenthal.com/2015/11/02/intro-to-collaborative-filtering/, but
 
 
 <b>Memory based CF  </b>
-<p>In Collaborative Filtering. Memory based CF algorithm look for similarity between users or between items. In user-user filter, cosine similarity is calculated between every pair of users within the data set result in a similarity matrix that's n_users X n_users. Similary for item-item, the cosine similarity is calculated between items. 
+<p>In Collaborative Filtering, Memory based CF algorithm look for similarity between users or between items. In user-user filter, cosine similarity is calculated between every pair of users within the data set result in a similarity matrix that's n_users X n_users. Similary for item-item, the cosine similarity is calculated between items. 
 The similiarity matrix is the weight that will yield model prediction. </p>
 
 <b>Model based CF (SVD) </b>
