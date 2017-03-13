@@ -19,7 +19,7 @@ representing implicit characteristics for the user and items. However, SVD can a
 <p align='center'><a href="https://www.slideshare.net/DKALab/collaborativefilteringfactorization"><img src= 'svd.jpg', width=50%, height=50%></a><br> Source: DKAlab (Slideshare)</p>
 
 <b>Model based CF (Stochastic Gradient Descend) </b>
-<p>Another way to solve the matrix factorization is using Stochastic Gradient Descend(SFD) to estimate the low-rank matrices. This method will save on memory thus more computationally efficient because it incrementally updates the model to find a better fit that minimizes the regularized squared error loss function.
+<p>Another way to solve the matrix factorization is by using Stochastic Gradient Descend(SGD) to estimate the low-rank matrices corresponding to user and item. This method will save on memory thus more computationally efficient because it incrementally updates the model to find a better fit that minimizes the regularized squared error loss function.
 
 <p align='center'><a href="https://databricks-training.s3.amazonaws.com/movie-recommendation-with-mllib.html"><img src= 'matrix_factorization.png', width=50%, height=50%></a> <br>Source: databricks training</p>
 
