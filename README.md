@@ -25,6 +25,6 @@ representing implicit characteristics for the user and items. However, SVD can a
 
 <p>After comparing the three algorithms, SGD matrix factorization yielded the best result with 100 iterations, learning rate of 0.01 to calculate the optimal latent feature matrices (see ipynb file). It would be interesting to use the same data set and run it with Alternative Least Squre (ALS) on Spark since it's an API within the current spark.ml package. 
 
-#References#
-1)Koren et al. (2009) Koren, Y., Bell, R.M., Volinsky, C.: Matrix factorization techniques for recommender systems. IEEE Computer 42(8), 30–37 (2009) 32 Francesco Ricci, Lior Rokach and Bracha Shapira
-2) Yu, H.F., Hsieh, C. J., Si, S., Dhillon, I.: Scalable coordinate descent approaches to parallel matrix factorization for recommender systems. In IEEE 12th International Conference on Data Mining, pp. 765–774 (2012)
+<b>References</b>
+<p>1)Koren et al. (2009) Koren, Y., Bell, R.M., Volinsky, C.: Matrix factorization techniques for recommender systems. IEEE Computer 42(8), 30–37 (2009) 32 Francesco Ricci, Lior Rokach and Bracha Shapira
+2) Yu, H.F., Hsieh, C. J., Si, S., Dhillon, I.: Scalable coordinate descent approaches to parallel matrix factorization for recommender systems. In IEEE 12th International Conference on Data Mining, pp. 765–774 (2012)</p>
