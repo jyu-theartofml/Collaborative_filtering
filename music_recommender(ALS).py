@@ -15,7 +15,7 @@ if __name__ == "__main__":
 	sqlContext=SQLContext(sc)
 	sc.setLogLevel("WARN")
  
-	raw_data=sqlContext.read.csv("music_instrument_ratings.csv", header="true", inferSchema="true",mode="DROPMALFORMED")
+	raw_data=sqlContext.read.csv("s3://music-recommender/music_instrument_ratings.csv", header="true", inferSchema="true",mode="DROPMALFORMED")
 	raw_data.show(5)
 	raw_data.printSchema()
 
