@@ -14,7 +14,7 @@ if __name__ == "__main__":
 	sc=SparkContext(conf=conf)
 	sqlContext=SQLContext(sc)
 	sc.setLogLevel("WARN")
-    ROPMALFORMED").rdd
+ 
 	raw_data=sqlContext.read.load("s3://music-recommender/ratings_Musical_Instruments.csv", format='csv').rdd
 	parts = raw_data.map(lambda row: row.value.split("/t"))
 	ratingsRDD = parts.map(lambda p: Row(userId=int(p[0]), Item=int(p[1]),
