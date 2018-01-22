@@ -23,7 +23,7 @@ if __name__ == "__main__":
 	(training, test) = raw_data.randomSplit([0.7, 0.3])
 
 	# Build the recommendation model using ALS on the training data
-	als = ALS(maxIter=20, regParam=0.5, userCol="userID", itemCol="Item", ratingCol="ratings", coldStartStrategy="drop")
+	als = ALS(maxIter=20, regParam=0.5, userCol="userID", itemCol="item", ratingCol="ratings", coldStartStrategy="drop")
 	model = als.fit(training)
 
 
