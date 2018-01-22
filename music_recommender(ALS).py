@@ -35,4 +35,4 @@ if __name__ == "__main__":
 	print("Root-mean-square error = " + str(rmse))
 
 
-spark.stop()
+sc.stop()
