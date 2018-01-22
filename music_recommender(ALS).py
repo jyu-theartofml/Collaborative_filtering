@@ -15,17 +15,15 @@ if __name__ == "__main__":
 	sqlContext=SQLContext(sc)
 	sc.setLogLevel("WARN")
  
-	raw_data=sqlContext.read.load("s3://music-recommender/ratings_Musical_Instruments.csv", format='csv').rdd
-	parts = raw_data.map(lambda row: row.value.split("/t"))
-	ratingsRDD = parts.map(lambda p: Row(userId=int(p[0]), Item=int(p[1]),
-                                     ratings=float(p[2]), timestamp=long(p[3])))
-	df=sqlContext.createDataFrame(ratingsRDD)
+	raw_data=sqlContext.read.csv("music_instrument_ratings.csv", header="true", inferSchema="true",mode="DROPMALFORMED")
+	raw_data.show(5)
+	raw_data.printSchema()
 
 	#split the data into training and testing
-	(training, test) = df.randomSplit([0.7, 0.3])
+	(training, test) = raw_data.randomSplit([0.7, 0.3])
 
 	# Build the recommendation model using ALS on the training data
-	als = ALS(maxIter=5, regParam=0.01, userCol="userID", itemCol="Item", ratingCol="ratings", coldStartStrategy="drop")
+	als = ALS(maxIter=20, regParam=0.5, userCol="userID", itemCol="Item", ratingCol="ratings", coldStartStrategy="drop")
 	model = als.fit(training)
 
 
