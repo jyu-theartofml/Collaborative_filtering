@@ -1,7 +1,7 @@
 # Collaborative_filtering
 
-<p> This repository demonstrates the usage of Collaborative Filtering (CF) on a dataset of ratings for musical instrument (source: http://jmcauley.ucsd.edu/data/amazon/)
-The dataset contains 4 columns, user, item, rating, timestamp. </p>
+<p> This repository demonstrates the usage of Collaborative Filtering (CF) on a dataset of ratings for musical instrument (source: http://jmcauley.ucsd.edu/data/amazon/). CF relies on finding similarity between users and items to recommend a product to user A based on the preference of a similar user (user B). Alternatively, there is another method called Content-based filtering which uses similarity between item characteristics to recommend a new item based on what the user liked previously. Unlike CF, this latter method has the advantage of not needing data from other users, but it requires a lot of domain knowledge to select or engineer features to track.</p>
+<p>This dataset is used only for CF, it contains 4 columns, user, item, rating, timestamp. </p>
 <p><b>UPDATE: I have added the code for Alternating Least Square (ALS) recommender using Spark MLlib's API. This was written to be ran on Amazon's EMR cluster. The performance of ALS did not match that of the matrix factorization by Stochastic Gradient Descend.</b></p>
 <p>The python notebook provides a quick comparison of algorithms for <i> Memory based CF</i>, <i>Model based CF (rank factorization via SVD)</i>, as well as <i>Stochastic Gradient Descent</i> for solving the rank factorization.
 The script is based on the algorithms presented on these two blogs: http://online.cambridgecoding.com/notebooks/mhaller/implementing-your-own-recommender-systems-in-python-using-stochastic-gradient-descent-4, 
